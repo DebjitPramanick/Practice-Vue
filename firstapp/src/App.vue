@@ -3,6 +3,7 @@
     <p>Hello {{name}}</p>
     <p>Age: {{age}}</p>
     <div v-text="salary"></div>
+    <div v-html="el"></div>
   </div>
 </template>
 
@@ -14,7 +15,8 @@ export default {
     return {
       name: "Debjit",
       age: 21,
-      salary: '16K'
+      salary: '16K',
+      el: "<strong>Developer</strong>"
     }
   }
 }
