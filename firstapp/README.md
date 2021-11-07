@@ -22,8 +22,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-Notes:
-1. Text binding
-2. Text interpolation
-3. Mustache syntax

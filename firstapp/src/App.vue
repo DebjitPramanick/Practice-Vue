@@ -26,6 +26,11 @@
 
     <div v-bind:style="[fontStyles, colorStyles]">Success Style</div>
 
+    <!-- Conditional rendering -->
+
+    <h2 v-if="num==0">The number is 0.</h2>
+    <h2 v-else>The number is not 0. It is {{num}}.</h2>
+
   </div>
 </template>
 
@@ -56,6 +61,7 @@ export default {
         color: 'white',
         backgroundColor: 'red'
       },
+      num: 4
     }
   }
 }
