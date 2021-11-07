@@ -8,6 +8,24 @@
     
     <p v-bind:id="headingId">Heading</p>
     <button v-bind:disabled="isDisabled">Bind</button>
+
+    <h2 v-bind:style="{
+      color: highlightColor,
+      'font-size': 50+'px',
+      backgroundColor: 'blue'
+    }"
+    >Inline style</h2>
+
+    <h2 v-bind:style="{
+      color: highlightColor,
+      'font-size': 50+'px',
+      backgroundColor: 'blue'
+    }"
+    >Style Object</h2>
+
+
+    <div v-bind:style="[fontStyles, colorStyles]">Success Style</div>
+
   </div>
 </template>
 
@@ -22,7 +40,22 @@ export default {
       salary: '16K',
       el: "<strong>Developer</strong>",
       headingId: "heading",
-      isDisabled: true
+      isDisabled: true,
+      highlightColor: 'orange',
+      styleObject: {
+        color: 'orange',
+        fontSize: '50px',
+        backgroundColor: 'blue'
+      },
+      fontStyles: {
+        fontSize: '30px',
+        fontWeight: 600,
+        fontStyle: 'italic'
+      },
+      colorStyles: {
+        color: 'white',
+        backgroundColor: 'red'
+      },
     }
   }
 }
