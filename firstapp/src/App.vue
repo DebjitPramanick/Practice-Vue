@@ -33,6 +33,20 @@
 
     <h1 v-show="showEl">Using V-Show</h1>
 
+
+    <!-- List rendering -->
+
+    <h2 v-for="name in names" :key="name">{{name}}</h2>
+
+    <h2 v-for="t in things" :key="t.type">
+      {{t.type}} - {{t.name}}
+    </h2>
+
+    <h2 v-for="s in shops" :key="s.name">
+      {{s.name}}: 
+      <span v-for="i in s.items" :key="i" style="margin-right: 10px">{{i}}</span>
+    </h2>
+
   </div>
 </template>
 
@@ -64,7 +78,23 @@ export default {
         backgroundColor: 'red'
       },
       num: 4,
-      showEl: true
+      showEl: true,
+      names: ['Debjit', 'Rakesh', 'Richard'],
+      things: [
+        {type: 'Food', name: 'Pasta'},
+        {type: 'Toy', name: 'Doll'},
+        {type: 'Electronics', name: 'Mobile'},
+      ],
+      shops: [
+        {
+          name: 'Grocerry',
+          items: ['Rice', 'Oil']
+        },
+        {
+          name: 'Food',
+          items: ['Burger', 'Pizza']
+        },
+      ]
     }
   }
 }
