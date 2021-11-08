@@ -52,6 +52,7 @@
     </template>
 
     <Methods />
+    <Forms />
 
   </div>
 </template>
@@ -59,11 +60,13 @@
 <script>
 
 import Methods from './Methods.vue'
+import Forms from './Forms.vue'
 
 export default {
   name: 'App',
   components: {
-    Methods
+    Methods,
+    Forms
   },
   data(){
     return {
