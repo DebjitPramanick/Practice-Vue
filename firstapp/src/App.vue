@@ -47,6 +47,10 @@
       <span v-for="i in s.items" :key="i" style="margin-right: 10px">{{i}}</span>
     </h2>
 
+    <template v-for="name in names" :key="name">
+      <h2 v-if="name === 'Debjit'">{{name}}</h2>
+    </template>
+
   </div>
 </template>
 
