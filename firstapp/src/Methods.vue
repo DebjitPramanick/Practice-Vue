@@ -2,6 +2,17 @@
   <div class="hello">
     <h2>{{add(2)}}</h2>
     <h2>{{multiply()}}</h2>
+    <div>
+        <h1>{{name}}</h1>
+        <button v-on:click="name = 'Batman'">Change Name</button>
+    </div>
+    <div>
+        <h1>{{count}}</h1>
+        <button v-on:click="count += 1">Increment</button>
+        <button v-on:click="count -= 1">Decrement</button>
+        <button v-on:click="increment">Increment Func</button>
+        <button v-on:click="decrement">Decrement Func</button>
+    </div>
   </div>
 </template>
 
@@ -13,7 +24,9 @@ export default {
   },
   data(){
       return{
-          base: 2
+          base: 2,
+          name: "Debjit",
+          count: 0
       }
   },
   methods: {
@@ -22,6 +35,12 @@ export default {
       },
       multiply(){
           return 10 *this.base
+      },
+      increment(){
+          this.count += 2
+      },
+      decrement(){
+          this.count -= 2
       }
   }
 }
