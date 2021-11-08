@@ -51,13 +51,20 @@
       <h2 v-if="name === 'Debjit'">{{name}}</h2>
     </template>
 
+    <Methods />
+
   </div>
 </template>
 
 <script>
 
+import Methods from './Methods.vue'
+
 export default {
   name: 'App',
+  components: {
+    Methods
+  },
   data(){
     return {
       name: "Debjit",
