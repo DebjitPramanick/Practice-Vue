@@ -53,6 +53,7 @@
 
     <Methods />
     <Forms />
+    <GetterSetter />
 
   </div>
 </template>
@@ -61,12 +62,14 @@
 
 import Methods from './Methods.vue'
 import Forms from './Forms.vue'
+import GetterSetter from './GetterSetter.vue'
 
 export default {
   name: 'App',
   components: {
     Methods,
-    Forms
+    Forms,
+    GetterSetter
   },
   data(){
     return {
