@@ -1,8 +1,10 @@
 <template>
   <div class="forms">
-    <form>
+    <form @submit="submitForm">
         <p>Your name: {{values.name}}</p>
         <p>Your country: {{values.country}}</p>
+        <p>Work type: {{values.remoteWork ? 'Remote' : 'Not Remote'}}</p>
+        <p>Skills are: <span v-for="s in values.skills" v-bind:key="s">{{s}}</span></p>
         <div>
             <label for='name'>Name</label>
             <input type="text" id='name' v-model="values.name"/>
@@ -13,6 +15,34 @@
                 <option value="Paris">Paris</option>
             </select>
         </div>
+
+        <div>
+            <label for='checkbox'>Choose work type: </label>
+            <input type="checkbox" v-model="values.remoteWork">
+        </div>
+
+        <div>
+            <label for='checkbox'>Choose skills </label>
+            <div class="skills-cnt">
+                <label for='checkbox'>HTML</label>
+                <input type="checkbox" value="HTML" v-model="values.skills">
+            </div>
+
+            <div class="skills-cnt">
+                <label for='checkbox'>Node</label>
+                <input type="checkbox" value="Node" v-model="values.skills">
+            </div>
+            <div class="skills-cnt">
+                <label for='checkbox'>JS</label>
+                <input type="checkbox" value="JS" v-model="values.skills">
+            </div>
+            <div class="skills-cnt">
+                <label for='checkbox'>React</label>
+                <input type="checkbox" value="React" v-model="values.skills">
+            </div>
+        </div>
+
+        <button>Submit</button>
     </form>
   </div>
 </template>
@@ -24,12 +54,17 @@ export default {
       return{
           values: {
               name: '',
-              country: ''
+              country: '',
+              remoteWork: false,
+              skills: []
           }
       }
   },
   methods: {
-      
+      submitForm(e){
+          e.preventDefault()
+          console.log(this.values)
+      }
   }
 }
 </script>
@@ -45,5 +80,17 @@ input{
     margin: 10px auto;
     padding: 10px;
     font-size: 16px;
+}
+.skills-cnt{
+    width: 160px;
+    margin: auto;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-cnt input{
+    margin: 0;
 }
 </style>
