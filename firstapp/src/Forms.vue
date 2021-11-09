@@ -7,7 +7,7 @@
         <p>Skills are: <span v-for="s in values.skills" v-bind:key="s">{{s}}</span></p>
         <div>
             <label for='name'>Name</label>
-            <input type="text" id='name' v-model="values.name"/>
+            <input type="text" id='name' v-model.trim="values.name"/>
             <select id="country" v-model="values.country">
                 <option value="Select a country" selected>Select a country</option>
                 <option value="India">India</option>
@@ -56,7 +56,7 @@ export default {
               name: '',
               country: '',
               remoteWork: false,
-              skills: []
+              skills: [],
           }
       }
   },
