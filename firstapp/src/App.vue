@@ -56,7 +56,7 @@
     <GetterSetter />
     <Watchers />
 
-    <Greet name="Debjit" age=20 />
+    <Greet name="Debjit" age=20 likes=20 nickname="Sujan" />
 
   </div>
 </template>
