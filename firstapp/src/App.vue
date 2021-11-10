@@ -56,6 +56,8 @@
     <GetterSetter />
     <Watchers />
 
+    <Greet name="Debjit" age=20 />
+
   </div>
 </template>
 
@@ -65,6 +67,7 @@ import Methods from './Methods.vue'
 import Forms from './Forms.vue'
 import GetterSetter from './GetterSetter.vue'
 import Watchers from './Watchers.vue'
+import Greet from './Greet.vue'
 
 export default {
   name: 'App',
@@ -72,7 +75,8 @@ export default {
     Methods,
     Forms,
     GetterSetter,
-    Watchers
+    Watchers,
+    Greet
   },
   data(){
     return {
