@@ -54,6 +54,7 @@
     <Methods />
     <Forms />
     <GetterSetter />
+    <VolumeTracker />
 
   </div>
 </template>
@@ -63,13 +64,15 @@
 import Methods from './Methods.vue'
 import Forms from './Forms.vue'
 import GetterSetter from './GetterSetter.vue'
+import VolumeTracker from './VolumeTracker.vue'
 
 export default {
   name: 'App',
   components: {
     Methods,
     Forms,
-    GetterSetter
+    GetterSetter,
+    VolumeTracker
   },
   data(){
     return {
