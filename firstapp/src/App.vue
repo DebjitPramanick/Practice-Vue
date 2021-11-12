@@ -59,9 +59,11 @@
     <Greet name="Debjit" age=20 likes=20 nickname="Sujan" />
 
     <ProvideInject />
+    <h3 v-if="number!==null">The number is: {{number}}</h3>
     <ComponentEvents v-show="showComponent" 
     @close="closePopup"
-    @alert="showName"/>
+    @alert="showName"
+    @passNum="setNum"/>
 
   </div>
 </template>
@@ -128,7 +130,8 @@ export default {
           items: ['Burger', 'Pizza']
         },
       ],
-      showComponent: true
+      showComponent: true,
+      number: null
     }
   },
   methods: {
@@ -137,6 +140,9 @@ export default {
     },
     showName(name){
       alert(name)
+    },
+    setNum(num){
+      this.number = num
     }
   },
   provide(){
