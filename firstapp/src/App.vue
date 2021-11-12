@@ -58,6 +58,8 @@
 
     <Greet name="Debjit" age=20 likes=20 nickname="Sujan" />
 
+    <ProvideInject />
+
   </div>
 </template>
 
@@ -68,6 +70,7 @@ import Forms from './Forms.vue'
 import GetterSetter from './GetterSetter.vue'
 import Watchers from './Watchers.vue'
 import Greet from './Greet.vue'
+import ProvideInject from './ProvideInject.vue'
 
 export default {
   name: 'App',
@@ -76,7 +79,8 @@ export default {
     Forms,
     GetterSetter,
     Watchers,
-    Greet
+    Greet,
+    ProvideInject
   },
   data(){
     return {
@@ -120,6 +124,11 @@ export default {
         },
       ]
     }
+  },
+  provide(){
+    return {
+      name: this.name
+    }
   }
 }
 </script>
@@ -139,5 +148,27 @@ input{
   font-size: 16px;
   display: block;
   margin: 8px auto;
+}
+
+.container {
+  background: #ffc65d;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+  font-size: 18px;
+}
+.container p {
+  margin: 0;
+}
+.container button {
+  cursor: pointer;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
 }
 </style>
