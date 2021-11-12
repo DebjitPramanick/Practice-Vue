@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="container">
-      <button @click="volume -= 2">-</button>
+    <div class="container flex">
+      <button class="icons" @click="volume -= 2">-</button>
       <p>Volumen Level: {{ volume }}</p>
-      <button @click="volume += 2">+</button>
+      <button class="icons" @click="volume += 2">+</button>
     </div>
     <input type="text" v-model="movie" />
     <input type="text" v-model="movieInfo.title" />

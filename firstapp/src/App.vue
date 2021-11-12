@@ -59,6 +59,9 @@
     <Greet name="Debjit" age=20 likes=20 nickname="Sujan" />
 
     <ProvideInject />
+    <ComponentEvents v-show="showComponent" 
+    @close="closePopup"
+    @alert="showName"/>
 
   </div>
 </template>
@@ -69,8 +72,9 @@ import Methods from './Methods.vue'
 import Forms from './Forms.vue'
 import GetterSetter from './GetterSetter.vue'
 import Watchers from './Watchers.vue'
-import Greet from './Greet.vue'
-import ProvideInject from './ProvideInject.vue'
+import Greet from './components/Greet.vue'
+import ProvideInject from './components/ProvideInject.vue'
+import ComponentEvents from "./components/ComponentEvents.vue"
 
 export default {
   name: 'App',
@@ -80,7 +84,8 @@ export default {
     GetterSetter,
     Watchers,
     Greet,
-    ProvideInject
+    ProvideInject,
+    ComponentEvents
   },
   data(){
     return {
@@ -122,7 +127,16 @@ export default {
           name: 'Food',
           items: ['Burger', 'Pizza']
         },
-      ]
+      ],
+      showComponent: true
+    }
+  },
+  methods: {
+    closePopup(){
+      this.showComponent=false
+    },
+    showName(name){
+      alert(name)
     }
   },
   provide(){
@@ -155,16 +169,28 @@ input{
   padding: 30px;
   max-width: 1400px;
   margin: 30px auto;
+  font-size: 18px;
+}
+.container.flex {
+  background: #ffc65d;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 30px auto;
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 16px;
   font-size: 18px;
 }
-.container p {
-  margin: 0;
+.container h3{
+  display: block;
+  margin: 0 0 16px 0;
 }
-.container button {
+p {
+  display: block;
+  margin: 4px 0;
+}
+.container .icons {
   cursor: pointer;
   font-size: 20px;
   width: 30px;

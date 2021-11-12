@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="container">
-            <h1>Component</h1>
+            <h3>ProvideInject</h3>
             <p>Username is: {{name}}</p>
         </div>
         
