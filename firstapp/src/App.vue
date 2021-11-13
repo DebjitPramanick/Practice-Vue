@@ -65,6 +65,8 @@
     @alert="showName"
     @passNum="setNum"/>
 
+    <InputModel v-model="name"/>
+
   </div>
 </template>
 
@@ -77,6 +79,7 @@ import Watchers from './Watchers.vue'
 import Greet from './components/Greet.vue'
 import ProvideInject from './components/ProvideInject.vue'
 import ComponentEvents from "./components/ComponentEvents.vue"
+import InputModel from "./components/InputModel.vue"
 
 export default {
   name: 'App',
@@ -87,7 +90,8 @@ export default {
     Watchers,
     Greet,
     ProvideInject,
-    ComponentEvents
+    ComponentEvents,
+    InputModel
   },
   data(){
     return {
@@ -131,7 +135,7 @@ export default {
         },
       ],
       showComponent: true,
-      number: null
+      number: null,
     }
   },
   methods: {
