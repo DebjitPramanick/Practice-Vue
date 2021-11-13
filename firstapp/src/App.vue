@@ -67,6 +67,18 @@
 
     <InputModel v-model="name"/>
 
+    <Card content="Card content 1">
+      It is slot for first card
+    </Card>
+
+    <Card content="Card content 2">
+      <input type="text">
+    </Card>
+
+    <Card content="Card content 1">
+      <button>Sample</button>
+    </Card>
+
   </div>
 </template>
 
@@ -80,6 +92,7 @@ import Greet from './components/Greet.vue'
 import ProvideInject from './components/ProvideInject.vue'
 import ComponentEvents from "./components/ComponentEvents.vue"
 import InputModel from "./components/InputModel.vue"
+import Card from "./slots/Card.vue"
 
 export default {
   name: 'App',
@@ -91,7 +104,8 @@ export default {
     Greet,
     ProvideInject,
     ComponentEvents,
-    InputModel
+    InputModel,
+    Card
   },
   data(){
     return {
