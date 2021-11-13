@@ -69,14 +69,23 @@
 
     <Card content="Card content 1">
       It is slot for first card
+      <template v-slot:footer>
+        <h3>Footer</h3>
+      </template>
     </Card>
 
     <Card content="Card content 2">
       <input type="text">
+      <template v-slot:footer>
+        <h3>Footer</h3>
+      </template>
     </Card>
 
     <Card content="Card content 1">
       <button>Sample</button>
+      <template v-slot:footer>
+        <h3>Footer</h3>
+      </template>
     </Card>
 
   </div>

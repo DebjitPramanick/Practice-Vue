@@ -3,6 +3,7 @@
         <h3>Card with Slots</h3>
         <p>{{content}}</p>
         <slot></slot>
+        <slot name="footer"></slot>
     </div>
 </template>
 
