@@ -87,6 +87,11 @@
         <h3>Footer</h3>
       </template>
     </Card>
+    <NameList>
+      <template v-slot:default="slotProps">
+        {{slotProps.first}} {{slotProps.last}}
+      </template>
+    </NameList>
 
   </div>
 </template>
@@ -102,6 +107,7 @@ import ProvideInject from './components/ProvideInject.vue'
 import ComponentEvents from "./components/ComponentEvents.vue"
 import InputModel from "./components/InputModel.vue"
 import Card from "./slots/Card.vue"
+import NameList from "./slots/NameList.vue"
 
 export default {
   name: 'App',
@@ -114,7 +120,8 @@ export default {
     ProvideInject,
     ComponentEvents,
     InputModel,
-    Card
+    Card,
+    NameList
   },
   data(){
     return {
