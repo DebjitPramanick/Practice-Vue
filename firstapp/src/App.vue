@@ -93,6 +93,8 @@
       </template>
     </NameList>
 
+    <TabContainer />
+
   </div>
 </template>
 
@@ -108,6 +110,7 @@ import ComponentEvents from "./components/ComponentEvents.vue"
 import InputModel from "./components/InputModel.vue"
 import Card from "./slots/Card.vue"
 import NameList from "./slots/NameList.vue"
+import TabContainer from "./components/dynamic_components/TabContainer.vue"
 
 export default {
   name: 'App',
@@ -121,7 +124,8 @@ export default {
     ComponentEvents,
     InputModel,
     Card,
-    NameList
+    NameList,
+    TabContainer
   },
   data(){
     return {
