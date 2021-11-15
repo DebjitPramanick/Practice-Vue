@@ -95,6 +95,8 @@
 
     <TabContainer />
 
+    <HTTPComponent />
+
   </div>
 </template>
 
@@ -111,6 +113,7 @@ import InputModel from "./components/InputModel.vue"
 import Card from "./slots/Card.vue"
 import NameList from "./slots/NameList.vue"
 import TabContainer from "./components/dynamic_components/TabContainer.vue"
+import HTTPComponent from "./HTTP/HTTPComponents.vue"
 
 export default {
   name: 'App',
@@ -125,7 +128,8 @@ export default {
     InputModel,
     Card,
     NameList,
-    TabContainer
+    TabContainer,
+    HTTPComponent
   },
   data(){
     return {
