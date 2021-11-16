@@ -99,6 +99,8 @@
 
     <TemplateRef />
 
+    <Main />
+
   </div>
 </template>
 
@@ -117,6 +119,7 @@ import NameList from "./slots/NameList.vue"
 import TabContainer from "./components/dynamic_components/TabContainer.vue"
 import HTTPComponent from "./HTTP/HTTPComponents.vue"
 import TemplateRef from "./components/TemplateRef.vue"
+import Main from "./mixins/Main.vue"
 
 export default {
   name: 'App',
@@ -133,7 +136,8 @@ export default {
     NameList,
     TabContainer,
     HTTPComponent,
-    TemplateRef
+    TemplateRef,
+    Main
   },
   data(){
     return {
