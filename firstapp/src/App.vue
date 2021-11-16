@@ -97,6 +97,8 @@
 
     <HTTPComponent />
 
+    <TemplateRef />
+
   </div>
 </template>
 
@@ -114,6 +116,7 @@ import Card from "./slots/Card.vue"
 import NameList from "./slots/NameList.vue"
 import TabContainer from "./components/dynamic_components/TabContainer.vue"
 import HTTPComponent from "./HTTP/HTTPComponents.vue"
+import TemplateRef from "./components/TemplateRef.vue"
 
 export default {
   name: 'App',
@@ -129,7 +132,8 @@ export default {
     Card,
     NameList,
     TabContainer,
-    HTTPComponent
+    HTTPComponent,
+    TemplateRef
   },
   data(){
     return {
