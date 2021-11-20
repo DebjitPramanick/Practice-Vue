@@ -103,6 +103,8 @@
 
     <DataRef />
 
+    <MethodsRef />
+
   </div>
 </template>
 
@@ -123,6 +125,7 @@ import HTTPComponent from "./HTTP/HTTPComponents.vue"
 import TemplateRef from "./components/TemplateRef.vue"
 import Main from "./mixins/Main.vue"
 import DataRef from './composition_api/DataRef.vue'
+import MethodsRef from './composition_api/MethodsRef.vue'
 
 export default {
   name: 'App',
@@ -141,7 +144,8 @@ export default {
     HTTPComponent,
     TemplateRef,
     Main,
-    DataRef
+    DataRef,
+    MethodsRef
   },
   data(){
     return {
