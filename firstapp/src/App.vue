@@ -101,6 +101,8 @@
 
     <Main />
 
+    <DataRef />
+
   </div>
 </template>
 
@@ -120,6 +122,7 @@ import TabContainer from "./components/dynamic_components/TabContainer.vue"
 import HTTPComponent from "./HTTP/HTTPComponents.vue"
 import TemplateRef from "./components/TemplateRef.vue"
 import Main from "./mixins/Main.vue"
+import DataRef from './composition_api/DataRef.vue'
 
 export default {
   name: 'App',
@@ -137,7 +140,8 @@ export default {
     TabContainer,
     HTTPComponent,
     TemplateRef,
-    Main
+    Main,
+    DataRef
   },
   data(){
     return {
